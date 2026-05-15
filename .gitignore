@@ -1,2 +1,7 @@
-/blog/output/
-/**/__pycache__/
+# nix output
+/result
+
+# pelican build output (written when doing live reload)
+/blog/output
+
+/**/__pycache__
