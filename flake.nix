@@ -38,6 +38,10 @@
             pelican --output $out
           '';
         };
+        packages.github-pages-tarball = pkgs.runCommand "blog-tarball" {} ''
+          mkdir -p $out
+          tar -czf $out/blog.tar.gz -C ${self'.packages.blog} .
+        '';
 
         process-compose.watch = {
           settings.processes = {
