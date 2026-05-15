@@ -19,7 +19,7 @@
       in {
         packages.default = pkgs.hello;
         devShells.default = pkgs.mkShell {
-          packages = [pythonPackages.nikola];
+          packages = [pythonPackages.pelican];
         };
       };
     };
