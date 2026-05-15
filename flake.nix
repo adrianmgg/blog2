@@ -40,7 +40,7 @@
           #  nix store.)
           buildPhase = ''
             pelican --output $out
-            touch $out/.nojekyll
+            printf 'augh\n' > $out/.nojekyll
           '';
         };
 
