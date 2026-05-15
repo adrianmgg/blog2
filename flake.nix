@@ -34,8 +34,13 @@
           pname = "amgg-blog";
           version = "1";
           buildInputs = [pelican];
+          # (for now i'm just being lazy and adding `.nojekyll` here,
+          #  since getting it in the actions build can't just be done
+          #  via `touch ./result/.nojekyll` as that'd be a link to the
+          #  nix store.)
           buildPhase = ''
             pelican --output $out
+            touch $out/.nojekyll
           '';
         };
 
