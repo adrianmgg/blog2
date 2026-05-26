@@ -34,6 +34,7 @@
           pname = "amgg-blog";
           version = "1";
           buildInputs = [pelican];
+		  dontFixup = true;
           # (for now i'm just being lazy and adding `.nojekyll` here,
           #  since getting it in the actions build can't just be done
           #  via `touch ./result/.nojekyll` as that'd be a link to the
